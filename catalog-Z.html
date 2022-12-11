@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog-Z</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+                sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        header {
+            margin-top: 0%;
+            padding: 15px;
+            font-size: x-large;
+
+        }
+
+        #a1 {
+            color: #3399CC;
+        }
+
+        #a1:hover {
+            color: green;
+        }
+
+        header a {
+            display: inline-block;
+            color: #666666;
+        }
+
+        header a:hover {
+            color: green;
+        }
+
+        #ctr {
+            margin-top: 1%;
+            width: 98.9%;
+        }
+
+        .bg {
+            display: flex;
+            background-image: url('img/hero.jpg');
+            background-size: contain;
+            background-attachment: fixed;
+            background-position: top;
+            background-repeat: no-repeat;
+
+            min-height: 200px;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+        }
+
+        .ab {
+            display: flex;
+
+            align-items: center;
+            color: #009999;
+        }
+
+        #imgs {
+            margin-top: 2%;
+            
+        }
+
+        #imgs img {
+            width: 93.68%;
+            height: 83.32%;
+
+        }
+
+        .imgs {
+            position: absolute;
+            padding: 5px;
+            margin-bottom: 90px;
+
+        }
+
+        .imgs h2 {
+            font-size: 1.3em;
+            font-weight: 300;
+        }
+
+        .overlay {
+            border: #fff 2px solid;
+            position: absolute;
+            top: 12%;
+            left: 10%;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.4);
+            width: 65%;
+            height: 50%;
+            padding: 2em;
+            opacity: 0;
+            transition: .3s ease;
+            text-align: center;
+        }
+
+        .imgs:hover .overlay {
+            opacity: 1;
+            background-color: rgba(5, 5, 5, 0.4);
+        }
+
+        .page {
+            margin-top: 100%;
+        }
+
+        .button {
+            background-color: #009999;
+            color: #fff;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            padding-top: 12px;
+            padding-right: 50px;
+            padding-bottom: 14px;
+            padding-left: 50px;
+
+        }
+
+        .pgno {
+            color: #999;
+            background-color: #EEEEEE;
+            font-size: 1.1rem;
+            margin: 10px;
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        .pghover:hover {
+            background-color: #009999;
+            color: #fff;
+        }
+
+        #nxtpg:hover {
+            background-color: #086969;
+        }
+
+        footer {
+            margin-top: 5%;
+            color: #999;
+            background-color: #EEEEEE;
+            display: block;
+            font-size: 0.95rem;
+        }
+
+        footer h3 {
+            color: #009999;
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            margin-top: 0;
+
+            font-weight: 500;
+            line-height: 1.2;
+        }
+
+        footer p {
+            line-height: 1.8;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <a id="a1" style="margin-right: 60%;" href="#">Catalog-Z</a>
+        <a style="margin-right: 1%;" href="#">Photos</a>
+        <a style="margin-right: 1%;" href="#">Videos</a>
+        <a style="margin-right: 1%;" href="#">About</a>
+        <a style="margin-right: 0%;" href="#">Contact</a>
+    </header>
+    <div id="ctr">
+        <div class="bg">
+            <form>
+                <input style="float:left ;" type="search" placeholder="Search">
+                <button style="float:left ;" type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor"
+                        class="bi bi-search" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
+                </button>
+            </form>
+        </div>
+
+        <div class="ab">
+            <div>
+                <h1>Latest Photos</h1>
+            </div>
+            <div>
+                <form action="get">
+                    Page
+                    <input type="text" size="1" value="1">
+                    of 200
+                </form>
+            </div>
+        </div>
+        <div id="imgs">
+            <div class="imgs" style=" width: 25%; ">
+                <img src="img/img-03.jpg">
+                <div class="overlay">
+                    <h2>CLOCKS</h2>
+                </div>
+                <br>
+                <p> 18 Oct 2020 <span style="text-align:justify ;"> 9,906 views</span></p>
+            </div>
+            <div class="imgs" style=" width:25%; margin-left: 25%; ">
+                <img src="img/img-04.jpg">
+                <div class="overlay">
+                    <h2>PLANTS</h2>
+                </div>
+                <br>
+                <p>14 Oct 2020 16,100 views</p>
+            </div>
+            <div class="imgs" style=" width:25%; margin-left: 50%; ">
+                <img src="img/img-05.jpg">
+                <div class="overlay">
+                    <h2>MORNING</h2>
+                </div>
+                <br>
+                <p>12 Oct 2020 12,460 views</p>
+            </div>
+            <div class="imgs" style=" width:25%; margin-left: 75%; ">
+                <img src="img/img-06.jpg">
+                <div class="overlay">
+                    <h2>PINKY</h2>
+                </div>
+                <br>
+                <p>10 Oct 2020 11,402 views</p>
+            </div>
+            <!--Next Row-->
+            <div class="imgs" style=" width: 25%; margin-top: 25%;">
+                <img src="img/img-01.jpg">
+                <div class="overlay">
+                    <h2>HANGERS</h2>
+                </div>
+                <br>
+                <p>24 Sep 2020 16,008 views</p>
+            </div>
+            <div class="imgs" style=" width: 25%; margin-top: 25%; margin-left: 25%; ">
+                <img src="img/img-02.jpg">
+                <div class="overlay">
+                    <h2>PERFUMES</h2>
+                </div>
+                <br>
+                <p>20 Sep 2020 12,860 views</p>
+            </div>
+            <div class="imgs" style=" width: 25%; margin-top: 25%; margin-left: 50%; ">
+                <img src="img/img-07.jpg">
+                <div class="overlay">
+                    <h2>BUS</h2>
+                </div>
+                <br>
+                <p>16 Sep 2020 10,900 views</p>
+            </div>
+            <div class="imgs" style=" width: 25%; margin-top: 25%; margin-left: 75%; ">
+                <img src="img/img-08.jpg">
+                <div class="overlay">
+                    <h2>NEW YORK</h2>
+                </div>
+                <br>
+                <p>12 Sep 2020 11,300 views</p>
+            </div>
+            <!--Next Row-->
+            <div class="imgs" style=" width: 25%; margin-top: 50%; ">
+                <img src="img/img-09.jpg">
+                <div class="overlay">
+                    <h2>ABSTRACT</h2>
+                </div>
+                <br>
+                <p>10 Sep 2020 42,700 views</p>
+            </div>
+            <div class="imgs" style=" width: 25%; margin-top: 50%; margin-left: 25%; ">
+                <img src="img/img-10.jpg">
+                <div class="overlay">
+                    <h2>FLOWERS</h2>
+                </div>
+                <br>
+                <p>8 Sep 2020 11,402 views</p>
+            </div>
+            <div class="imgs" style=" width: 25%; margin-top: 50%; margin-left: 50%; ">
+                <img src="img/img-11.jpg">
+                <div class="overlay">
+                    <h2>ROSY</h2>
+                </div>
+                <br>
+                <p>4 Sep 2020 32,906 views</p>
+            </div>
+            <div class="imgs" style=" width: 25%; margin-top: 50%; margin-left: 75%; ">
+                <img src="img/img-12.jpg">
+                <div class="overlay">
+                    <h2>ROCKI</h2>
+                </div>
+                <br>
+                <p>28 Aug 2020 50,700 views</p>
+            </div>
+            <!--Next Row-->
+            <div class="imgs" style=" width: 25%; margin-top: 75%; ">
+                <img src="img/img-13.jpg">
+                <div class="overlay">
+                    <h2>PURPLE</h2>
+                </div>
+                <br>
+                <p>22 Aug 2020 107,510 views</p>
+            </div>
+            <div class="imgs" style=" width: 25%; margin-top: 75%; margin-left: 25%; ">
+                <img src="img/img-14.jpg">
+                <div class="overlay">
+                    <h2>SEA</h2>
+                </div>
+                <br>
+                <p>14 Aug 2020 118,006 views</p>
+            </div>
+            <div class="imgs" style=" width: 25%; margin-top: 75%; margin-left: 50%; ">
+                <img src="img/img-15.jpg">
+                <div class="overlay">
+                    <h2>TURTLE</h2>
+                </div>
+                <br>
+                <p>9 Aug 2020 121,300 views</p>
+            </div>
+            <div class="imgs" style=" width: 25%; margin-top: 75%; margin-left: 75%; ">
+                <img src="img/img-16.jpg">
+                <div class="overlay">
+                    <h2>PEACE</h2>
+                </div>
+                <br>
+                <p>3 Aug 2020 21,204 views</p>
+            </div>
+        </div>
+        <div class="page">
+            <div style="display:inline-block;"><a href="#" class="button"
+                    style="cursor: not-allowed; opacity:0.7;">Previous</a></div>
+            <div style="display:inline-block;margin-left: 30%;position: absolute;">
+                <a href="#" class="pgno" style="background-color: #009999; color: #fff;">1</a>
+            </div>
+            <div style="display:inline-block; position:absolute; width:30px; margin-left: 35%">
+                <a href="#" class="pgno pghover">2</a>
+            </div>
+            <div style="display:inline-block; position:absolute; width:30px; margin-left: 40%">
+                <a href="#" class="pgno pghover">3</a>
+            </div>
+            <div style="display:inline-block; position:absolute; width:30px; margin-left: 45%">
+                <a href="#" class="pgno pghover">4</a>
+            </div>
+            <div style="display:inline-block;margin-left: 70%;">
+                <a href="#" class="button" id="nxtpg">Next Page</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div style="display:flex;">
+            <div style="width:32% ;">
+                <h3>About Catalog-Z</h3>
+                <p>Catalog-Z is free
+                    <a href="#">Bootstrap 5</a> Alpha 2 HTML Template for video and photo websites.
+                    You can freely use this TemplateMo layout for a front-end integration with any kind of CMS website.
+                </p>
+            </div>
+            <div style="width:32% ;">
+                <h3>Our Links</h3>
+                <ul>
+                    <li><a href="#">Advertise</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Our Company</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div style="width:32% ;">
+                <ul style="display:flex;" type="none">
+                    <li><a href="https://facebook.com"></a>
+                        <div style="padding:5px ; background-color:#fff; width:fit-content;"><img src="img/fblogo.PNG"
+                                alt=""></div>
+                    </li>
+                    <li><a href="https://twitter.com"></a>
+                        <div style="padding:5px ; background-color:#fff; width:fit-content;"><img
+                                src="img/twitterlogo.PNG" alt=""></div>
+                    </li>
+                    <li><a href="https://instagram.com"></a>
+                        <div style="padding:4px ; background-color:#fff; width:fit-content;"><img
+                                src="img/instalogo.PNG" alt=""></div>
+                    </li>
+                    <li><a href="https://pinterest.com"></a>
+                        <div style="padding:3px ; background-color:#fff; width:fit-content;"><img
+                                src="img/pinterestlogo.PNG" alt=""></div>
+                    </li>
+                </ul>
+                <a href="#">Terms of Use</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+        <div>
+            <div>
+                Copyright 2020 Catalog-Z Company. All rights reserved.
+            </div>
+            <div>
+                Designed by <a href="https://templatemo.Company">TemplateMo</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
